@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Example</title>
+</head>
+<body>
+  <header>
+    <a href="index.html">Home</a>
+  </header>
+  <br>
+  <h1>Form Example</h1>
+
+  <form>
+    <label for="height">Height:</label><br>
+    <input type="text" id="height" name="height"><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+
+    <p>Select meals:</p>
+    <input type="checkbox" id="breakfast" name="meal" value="breakfast">
+    <label for="breakfast">Breakfast</label><br>
+
+    <input type="checkbox" id="lunch" name="meal" value="lunch">
+    <label for="lunch">Lunch</label><br>
+
+    <input type="checkbox" id="dinner" name="meal" value="dinner">
+    <label for="dinner">Dinner</label><br><br>
+
+    <label for="car">Select a cool car:</label><br>
+    <select id="car" name="car">
+      <option value="">-- Please choose an option --</option>
+      <option value="ferrari">Ferrari</option>
+      <option value="lamborghini">Lamborghini</option>
+      <option value="porsche">Porsche</option>
+      <option value="maserati">Maserati</option>
+      <option value="aston_martin">Aston Martin</option>
+    </select><br><br>
+
+    <label for="excitement">Excitement Level:</label><br>
+    <input type="range" id="excitement" name="excitement" min="0" max="100" step="1" value="50">
+    <span id="excitementValue">50</span>%<br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    const excitementInput = document.getElementById('excitement');
+    const excitementValue = document.getElementById('excitementValue');
+
+    excitementInput.addEventListener('input', function() {
+      excitementValue.textContent = this.value;
+    });
+  </script>
+</body>
+</html>
